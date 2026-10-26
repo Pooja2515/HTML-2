@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMy Show</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #f1f4f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+            padding: 20px;
+        }
+        .card{
+            width: 1520px;
+            display: flex;
+            gap: 30px;
+        }
+        .left{
+            width: 440px;
+            height:440px
+        }
+        .Filters{
+            width: 100%;
+            height: 50px;
+            background-color: white;
+            margin-bottom: 15px;
+            padding: 0px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 4px;
+        }
+        .Filters select{
+            border: none;
+            background-color: transparent;
+            font-size: 16px;
+            outline: none;
+            width: 80%;
+        }
+        .clear{
+            color: #888;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .Venue{
+            width: 100%;
+            height: 45px;
+            background-color: transparent;
+            border: 1px solid #ff304f;
+            color: #ff304f;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .Venue:hover{
+            background-color: #ff304f;
+            color: white;
+        }
+        .right{
+            width: 960px;
+            height: 600px;  
+        } 
+        .right h3{
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+        .tags{
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            padding: 0;
+        }
+        .tags li{
+            padding: 8px 16px;
+            border: 1px solid #e0e0e0;
+            border-radius: 20px;
+            background-color: white;
+            color: #ff304f;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .images-grid{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .poster{
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        .poster img{
+            width: 100%;
+            height: 330px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+        .poster h4{
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: black;
+        }
+        .poster .venue{
+            color: #646262;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+        .poster .category{
+            color: #828181;
+            font-size: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .poster .price{
+            font-size: 15px;
+            font-weight: bold;
+            color: #2c2a2a;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="left">
+            <h3>Filters</h3>
+            <div class="Filters">
+                <select>
+                    <option disabled selected>Categories</option>
+                    <option>Workshops</option>
+                    <option>Music Shows</option>
+                    <option>Comedy Shows</option>
+                    <option>Kids</option>
+                    <option>Screening</option>
+                </select>
+                <span class="clear">Clear</span>
+            </div>
+            <div class="Filters">
+                <select>
+                    <option disabled selected>Date</option>
+                    <option>Today</option>
+                    <option>Tomorrow</option>
+                    <option>This Weekend</option>
+                </select>
+                <span class="clear">Clear</span>
+            </div>
+            <div class="Filters">
+                <select>
+                    <option disabled selected>Languages</option>
+                    <option>English</option>
+                    <option>Hindi</option>
+                    <option>Telugu</option>
+                    <option>Bengali</option>
+                </select>
+                <span class="clear">Clear</span>
+            </div>
+            <div class="Filters">
+                <select>
+                    <option disabled selected>More Filters</option>
+                    <option>Outdoor Events</option>
+                    <option>Fast filling</option>
+                    <option>Must attend</option>
+                    <option>Kids Allowed</option>
+                </select>
+                <span class="clear">Clear</span>
+            </div>
+            <div class="Filters">
+                <select>
+                    <option disabled selected>Price</option>
+                    <option>Free</option>
+                    <option>0-500</option>
+                    <option>501-2000</option>
+                    <option>Above 2000</option>
+                </select>
+                <span class="clear">Clear</span>
+            </div>
+            <button class="Venue">Browse by Venues</button>
+        </div>
+        <div class="right">
+            <h3>Events in Hyderabad</h3>
+            <ul class="tags">
+                <li>Workshops</li>
+                <li>Music Shows</li>
+                <li>Comedy Shows</li>
+                <li>Performances</li>
+                <li>Kids</li>
+                <li>Exhibitions</li>
+                <li>New Year Parties</li>
+                <li>Conferences</li>
+                <li>Meetups</li>
+                <li>Screening</li>
+            </ul>
+            <div class="images-grid">
+                <div class="poster">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC,e-usm-2-2-0.5-0.008:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAxOCBPY3Q%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end:l-image,i-discovery-catalog@@icons@@pt-v1.png,t-false,lfo-top_right,lx-N5,ly-0,w-160,l-end/et00453600-xhymxrcxmr-portrait.jpg" alt="Rohan Gujral Poster">
+                    <h4>Rohan Gujral Live</h4>
+                    <p class="venue">District 150: Hyderabad</p>
+                    <p class="category">Stand-up Comedy</p>
+                    <p class="price">₹399 onwards</p>
+                </div>
+                <div class="poster">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC,e-usm-2-2-0.5-0.008:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyNCBPY3Q%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end:l-image,i-discovery-catalog@@icons@@pt-v1.png,t-false,lfo-top_right,lx-N5,ly-0,w-160,l-end/et00518307-wkxlupzfzt-portrait.jpg" alt="Thaikkudam Bridge Live Poster">
+                    <h4>Thaikkudam Bridge Live In Hyderabad</h4>
+                    <p class="venue">Kingdome Klub and Kitchen</p>
+                    <p class="category">Concerts</p>
+                    <p class="price">₹699 onwards</p>
+                </div>
+                <div class="poster">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC,e-usm-2-2-0.5-0.008:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAxNyBPY3Qgb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end:l-image,i-discovery-catalog@@icons@@pt-v1.png,t-false,lfo-top_right,lx-N5,ly-0,w-160,l-end/et00445350-mtdzlvkxev-portrait.jpg" alt="Pottery Workshop Poster">
+                    <h4>Pottery Workshop at Forefathers</h4>
+                    <p class="venue">Forefathers: Hyderabad</p>
+                    <p class="category">Arts and Crafts</p>
+                    <p class="price">₹599 onwards</p>
+                </div>
+                <div class="poster">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC,e-usm-2-2-0.5-0.008:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAxIE5vdg%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00495698-twptsaflmr-portrait.jpg" alt="Quick Style India Tour Poster">
+                    <h4>Quick Style India Tour-Hyderabad</h4>
+                    <p class="venue">Big Bull Club: Hyderabad</p>
+                    <p class="category">Concert</p>
+                    <p class="price">₹1499 onwards</p>
+            </div>
+            <div class="poster">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC,e-usm-2-2-0.5-0.008:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-TW9uLCAyNiBPY3Qgb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00463795-szduszggxq-portrait.jpg" alt="Dance Choreography Session">
+                    <h4>Dance Choreography Session</h4>
+                    <p class="venue">1 Hundred Dance Studio:....</p>
+                    <p class="category">Dance</p>
+                    <p class="price">₹399 onwards</p>
+            </div>
+            <div class="poster">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC,e-usm-2-2-0.5-0.008:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAzMSBPY3Q%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00519623-kkerrswprj-portrait.jpg" alt="The Iron Maiden">
+                    <h4>The Iron Maiden Experience Ft.Maiden...</h4>
+                    <p class="venue">Hard Rock Cafe:Hyderabad</p>
+                    <p class="category">Club Gigs</p>
+                    <p class="price">₹249 onwards</p>
+            </div>
+            <div class="poster">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC,e-usm-2-2-0.5-0.008:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-V2VkLCAyOCBPY3Qgb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00496943-dbprqkmzct-portrait.jpg" alt="The Standup Comedy">
+                    <h4>The Standup Comedy Night</h4>
+                    <p class="venue">Brew Commune Cafe:...</p>
+                    <p class="category">Open Mic Comedy</p>
+                    <p class="price">Free</p>
+            </div>
+            <div class="poster">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC,e-usm-2-2-0.5-0.008:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAzMCBPY3Q%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00523403-purlppyxvs-portrait.jpg" alt="Bad Call">
+                    <h4>BAD CALL:HALLOWEEN WEEKEND FT.DJ...</h4>
+                    <p class="venue">Big Bull Club:Hyderabad</p>
+                    <p class="category">Club Gigs</p>
+                    <p class="price">₹499 onwards</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
